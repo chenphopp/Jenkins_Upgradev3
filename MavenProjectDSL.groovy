@@ -7,9 +7,6 @@ job('First-Maven-Project-Via-DSL') {
         scm('* * * * *')
     }
     steps {
-        // Set Git user email and name
-        sh 'git config --global user.email "chenphop.ch@gmail.com"'
-        sh 'git config --global user.name "chenphopp"'
         maven('clean package', 'maven-samples/single-module/pom.xml')
     }
     publishers {
